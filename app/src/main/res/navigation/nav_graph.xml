@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/passwordDashboardFragment">
+
+    <fragment
+        android:id="@+id/passwordDashboardFragment"
+        android:name="com.example.passlock.PasswordDashboardFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_password_dashboard">
+
+        <action
+            android:id="@+id/action_passwordDashboardFragment_to_passwordDetailFragment"
+            app:destination="@id/passwordDetailFragment" />
+        <action
+            android:id="@+id/action_passwordDashboardFragment_to_addPasswordFragment"
+            app:destination="@id/addPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordDetailFragment"
+        android:name="com.example.passlock.PasswordDetailFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_password_detail">
+        <action
+            android:id="@+id/action_passwordDetailFragment_to_addPasswordFragment"
+            app:destination="@id/addPasswordFragment" />
+        <argument
+            android:name="passwordId"
+            app:argType="integer" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addPasswordFragment"
+        android:name="com.example.passlock.AddPasswordFragment"
+        android:label="fragment_password_add"
+        tools:layout="@layout/fragment_password_add">
+        <argument
+            android:name="passwordId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_addPasswordFragment_to_passwordDashboardFragment"
+            app:destination="@id/passwordDashboardFragment" />
+    </fragment>
+</navigation>
