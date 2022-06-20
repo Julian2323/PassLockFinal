@@ -34,7 +34,7 @@
     <fragment
         android:id="@+id/addPasswordFragment"
         android:name="com.example.passlock.AddPasswordFragment"
-        android:label="fragment_password_add"
+        android:label="@string/add_password_fragment"
         tools:layout="@layout/fragment_password_add">
         <argument
             android:name="passwordId"
