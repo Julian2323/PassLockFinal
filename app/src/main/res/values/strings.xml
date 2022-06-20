@@ -2,8 +2,9 @@
     <string name="app_name">PassLock</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">Password List</string>
+    <string name="first_fragment_label">Password Dashboard</string>
     <string name="second_fragment_label">Password Detail</string>
+    <string name="add_password_fragment">Add A New Password</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
